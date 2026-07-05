@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id" x-data="articlePage()" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Mendaftar Seller - KlikVirtual.ID</title>
+    <meta name="description" content="Panduan lengkap cara mendaftar akun seller KlikVirtual.ID.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { brand: { 50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 400: '#a78bfa', 500: '#5850ec', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 950: '#130f26' } } } }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        [x-cloak] { display: none !important; }
+        html { scroll-behavior: smooth; }
+        .theme-transition { transition: background-color 0.35s ease, border-color 0.25s ease, color 0.25s ease; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 900; margin-top: 2.5rem; margin-bottom: 1rem; color: #0f172a; }
+        .dark .article-body h2 { color: #fff; }
+        .article-body p { color: #475569; line-height: 1.8; margin-bottom: 1rem; }
+        .dark .article-body p { color: #cbd5e1; }
+    </style>
+</head>
+<body class="theme-transition font-sans antialiased text-slate-800 bg-slate-50 dark:text-slate-100 dark:bg-[#080b14]">
+<header class="sticky top-0 z-40 w-full theme-transition border-b bg-white/80 backdrop-blur-md border-slate-200 dark:bg-slate-950/80 dark:border-slate-800">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="informasi.html" class="flex items-center gap-2 text-sm font-black text-brand-500"><i class="fa-solid fa-arrow-left"></i> Kembali ke Informasi</a>
+        <button @click="darkMode = !darkMode" class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all" aria-label="Toggle Dark Mode"><i class="fa-solid" :class="darkMode ? 'fa-sun text-yellow-400' : 'fa-moon text-slate-500'"></i></button>
+    </div>
+</header>
+
+<main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+    <article class="theme-transition bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-10 shadow-sm">
+        <div class="space-y-5 border-b border-slate-200 dark:border-slate-800 pb-8 mb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/70 text-brand-600 dark:text-brand-300 text-xs font-black uppercase tracking-widest"><i class="fa-solid fa-user-plus"></i> Panduan Seller</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">Cara Mendaftar Akun Seller di KlikVirtual.ID</h1>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Panduan ini membantu Anda membuat akun seller, menyiapkan toko, dan mulai menjual produk digital melalui KlikVirtual.ID.</p>
+        </div>
+
+        <div class="article-body">
+            <h2>1. Buka Halaman Pendaftaran Seller</h2>
+            <p>Kunjungi halaman pendaftaran seller KlikVirtual.ID melalui tombol daftar di website utama atau langsung ke dashboard seller. Pastikan Anda menggunakan email aktif karena email akan digunakan untuk login dan komunikasi akun.</p>
+            <p><a href="https://seller.klikvirtual.id/register" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-brand-500 hover:bg-brand-600 text-white text-sm font-black transition-all">Buka Form Pendaftaran <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a></p>
+
+            <h2>2. Isi Data Toko dengan Benar</h2>
+            <p>Masukkan nama toko, email, password, nomor WhatsApp, dan slug toko. Slug toko akan menjadi alamat toko Anda, misalnya <strong>klikvirtual.id/namatoko</strong>.</p>
+            <div class="rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 p-5 text-sm text-slate-600 dark:text-slate-300 my-6">
+                Tips: gunakan slug singkat, mudah dibaca, dan sesuai brand toko agar mudah dibagikan ke pembeli.
+            </div>
+
+            <h2>3. Tunggu Aktivasi Admin</h2>
+            <p>Setelah pendaftaran berhasil, akun seller akan diperiksa oleh admin. Selama akun belum aktif, login atau fitur dashboard dapat dibatasi. Jika data sudah sesuai, admin akan mengaktifkan akun seller Anda.</p>
+
+            <h2>4. Lengkapi Profil Toko</h2>
+            <p>Setelah akun aktif, masuk ke dashboard seller dan buka pengaturan toko. Lengkapi logo toko, deskripsi toko, WhatsApp, dan Telegram ID agar pembeli lebih percaya dan notifikasi penjualan dapat masuk ke Telegram Anda.</p>
+
+            <h2>5. Buat Produk dan Upload Stok Digital</h2>
+            <p>Buka menu produk dan buat produk baru. Isi nama produk, kategori, harga dasar, deskripsi, ketentuan, dan gambar. Setelah produk dibuat, upload stok digital seperti akun, voucher, lisensi, kode, atau data akses lainnya.</p>
+            <p>Stok digital akan dikirim otomatis setelah pembayaran pembeli berhasil terverifikasi.</p>
+
+            <h2>6. Mulai Bagikan Link Toko</h2>
+            <p>Setelah produk dan stok siap, bagikan link toko Anda ke calon pembeli. Pembeli dapat memilih produk, checkout, membayar via QRIS, dan menerima produk digital secara otomatis.</p>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <a href="informasi.html" class="inline-flex items-center gap-2 text-sm font-black text-slate-600 dark:text-slate-300 hover:text-brand-500"><i class="fa-solid fa-arrow-left"></i> Kembali ke Pusat Informasi</a>
+            <a href="cara-listing-produk.html" class="inline-flex items-center gap-2 text-sm font-black text-brand-500 hover:text-brand-600">Lanjut: Cara Listing Produk <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+    </article>
+</main>
+
+<script>function articlePage() { return { darkMode: false } }</script>
+</body>
+</html>

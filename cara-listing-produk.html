@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id" x-data="articlePage()" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Listing Produk Reseller - KlikVirtual.ID</title>
+    <meta name="description" content="Panduan lengkap cara menggunakan fitur Reseller Listing KlikVirtual.ID.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { brand: { 50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 400: '#a78bfa', 500: '#5850ec', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 950: '#130f26' } } } }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        [x-cloak] { display: none !important; }
+        html { scroll-behavior: smooth; }
+        .theme-transition { transition: background-color 0.35s ease, border-color 0.25s ease, color 0.25s ease; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 900; margin-top: 2.5rem; margin-bottom: 1rem; color: #0f172a; }
+        .dark .article-body h2 { color: #fff; }
+        .article-body p { color: #475569; line-height: 1.8; margin-bottom: 1rem; }
+        .dark .article-body p { color: #cbd5e1; }
+    </style>
+</head>
+<body class="theme-transition font-sans antialiased text-slate-800 bg-slate-50 dark:text-slate-100 dark:bg-[#080b14]">
+<header class="sticky top-0 z-40 w-full theme-transition border-b bg-white/80 backdrop-blur-md border-slate-200 dark:bg-slate-950/80 dark:border-slate-800">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="informasi.html" class="flex items-center gap-2 text-sm font-black text-brand-500"><i class="fa-solid fa-arrow-left"></i> Kembali ke Informasi</a>
+        <button @click="darkMode = !darkMode" class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/80 transition-all" aria-label="Toggle Dark Mode"><i class="fa-solid" :class="darkMode ? 'fa-sun text-yellow-400' : 'fa-moon text-slate-500'"></i></button>
+    </div>
+</header>
+
+<main class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+    <article class="theme-transition bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 md:p-10 shadow-sm">
+        <div class="space-y-5 border-b border-slate-200 dark:border-slate-800 pb-8 mb-8">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-300 text-xs font-black uppercase tracking-widest"><i class="fa-solid fa-handshake-angle"></i> Reseller Listing</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">Cara Menggunakan Fitur Reseller Listing</h1>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Fitur ini memungkinkan seller menjual produk seller lain tanpa duplikasi stok. Produk reseller tampil di toko reseller, tetapi stok tetap dikontrol pemilik produk asli.</p>
+        </div>
+
+        <div class="article-body">
+            <h2>Apa Itu Reseller Listing?</h2>
+            <p>Reseller Listing adalah sistem relasi antar seller. Seller A sebagai pemilik produk dapat membuka produknya agar bisa dijual oleh Seller B. Seller B tidak membuat produk duplikat, tetapi membuat listing yang terhubung ke produk asli Seller A.</p>
+
+            <h2>Untuk Pemilik Produk: Membuka Produk Agar Bisa Di-Resell</h2>
+            <p>Buka dashboard seller, masuk ke menu <strong>Reseller Produk</strong>, lalu cari produk aktif Anda. Aktifkan toggle <strong>Izinkan Reseller</strong> pada produk yang ingin dibuka untuk seller lain.</p>
+            <p>Klik tombol <strong>Atur</strong> untuk menentukan tipe approval dan batas harga reseller. Anda dapat memilih manual approval atau auto approval.</p>
+
+            <div class="rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 p-5 text-sm text-slate-600 dark:text-slate-300 my-6 space-y-2">
+                <p><strong class="text-slate-900 dark:text-white">Manual Approval:</strong> setiap seller yang ingin join harus Anda setujui satu per satu.</p>
+                <p><strong class="text-slate-900 dark:text-white">Auto Approval:</strong> seller yang join langsung disetujui dan listing aktif.</p>
+            </div>
+
+            <h2>Untuk Reseller: Mengajukan Join Produk</h2>
+            <p>Buka menu <strong>Reseller Produk</strong> di dashboard seller Anda. Pada bagian produk seller lain, pilih produk yang ingin dijual, lalu isi <strong>Harga Jual di Toko Anda</strong>.</p>
+            <p>Harga jual tidak boleh di bawah harga minimum yang ditentukan pemilik produk. Jika pemilik produk menentukan harga maksimum, harga jual juga tidak boleh melewati batas tersebut.</p>
+
+            <h2>Bagaimana Margin Reseller Dihitung?</h2>
+            <p>Margin reseller otomatis berasal dari selisih harga jual reseller dan harga dasar produk. Tidak ada setting komisi tambahan.</p>
+            <div class="rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900 p-5 text-sm text-emerald-800 dark:text-emerald-200 my-6">
+                Contoh: harga dasar produk Rp50.000, reseller menjual Rp60.000. Maka margin reseller adalah Rp10.000 sebelum alokasi fee transaksi.
+            </div>
+
+            <h2>Apa yang Terjadi Saat Ada Order?</h2>
+            <p>Jika pembeli membeli dari toko reseller, order tetap mengambil stok dari produk asli pemilik produk. Sistem mencatat siapa pemilik produk asli dan siapa reseller. Notifikasi penjualan dikirim ke kedua seller.</p>
+
+            <h2>Apakah Produk Reseller Tampil di Storefront Utama?</h2>
+            <p>Tidak. Storefront utama hanya menampilkan produk asli seller. Produk reseller tampil di halaman toko reseller masing-masing dan di bot Telegram seller jika seller mengaktifkan bot market.</p>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <a href="informasi.html" class="inline-flex items-center gap-2 text-sm font-black text-slate-600 dark:text-slate-300 hover:text-brand-500"><i class="fa-solid fa-arrow-left"></i> Kembali ke Pusat Informasi</a>
+            <a href="cara-daftar-seller.html" class="inline-flex items-center gap-2 text-sm font-black text-brand-500 hover:text-brand-600">Baca: Cara Daftar Seller <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+    </article>
+</main>
+
+<script>function articlePage() { return { darkMode: false } }</script>
+</body>
+</html>
